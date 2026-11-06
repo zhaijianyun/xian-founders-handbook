@@ -67,7 +67,7 @@ document.addEventListener("dragstart", (event) => {
 if (window.HANDBOOK_DATA) {
   createPages(window.HANDBOOK_DATA.slices);
 } else {
-  fetch(`${base}assets/responsive-slices.json`)
+  fetch(`${base}responsive-slices.json`)
     .then((response) => {
       if (!response.ok) throw new Error(`Cannot load handbook: ${response.status}`);
       return response.json();
